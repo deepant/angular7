@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    &:before, &:after {
+      box-sizing: border-box;
+    }
+  }
+  
+  body {
+    /* margin: 40px; */
+    font-family: 'Open Sans', 'sans-serif';
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .wrapper {
+    max-width: 940px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 5px;
+    margin: 0 auto;
+  }
+  
+  /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+  @supports (display: grid) {
+    .wrapper > * {
+      width: auto;
+      margin: 0;
+    }
+  }
+  
