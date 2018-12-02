@@ -4,16 +4,17 @@
       <label>
         User Name :
       </label>
-      <input type="text" name="userName" />
+      <input [(ngModel)]="loginForm.userName" type="text" name="userName" />
+      {{loginForm.userName}}
     </div>
     <div>
       <label>
         Password :
       </label>
-      <input type="text" name="password" />
+      <input [(ngModel)]="loginForm.password"  type="text" name="password" />
     </div>
     <div>
-      <button>Login</button>
+      <button (click)="login()">Login</button>
     </div>
 
   </form>
