@@ -11,6 +11,27 @@ export class LoginFormComponent implements OnInit {
   loginForm = new LoginForm();
   logger:string;
 
+  userList = [
+    {
+      userName :"user - 1",
+    },
+    {
+      userName :"user - 2",
+    },
+    {
+      userName :"user - 3",
+    },
+    {
+      userName :"user - 4",
+    },
+    {
+      userName :"user - 5",
+    },
+    {
+      userName :"user - 6",
+    }
+  ]
+
   constructor() {
    }
 

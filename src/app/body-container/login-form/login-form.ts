@@ -1,4 +1,4 @@
 export class LoginForm {
-    userName:string = '';
+    userName:string = 'user - 1';
     password:string;
 }

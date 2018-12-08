@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './body-container/login-form/login-form.component';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginFormComponent } from './body-container/login-form/login-form.compo
     HeaderComponent,
     BodyContainerComponent,
     FooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

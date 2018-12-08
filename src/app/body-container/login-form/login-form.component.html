@@ -1,11 +1,12 @@
 <form>
     <h1>Login Form</h1>
     <div>
-      <label>
+      <label ccHighlight>
         User Name :
       </label>
-      <input [(ngModel)]="loginForm.userName" type="text" name="userName" />
-      {{loginForm.userName}}
+      <select [(ngModel)]="loginForm.userName" name="userName" >
+        <option *ngFor="let user of userList" value="{{user.userName}}">{{user.userName}}</option>  
+      </select>
     </div>
     <div>
       <label>
