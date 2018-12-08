@@ -9,6 +9,20 @@ import { BodyContainerComponent } from './body-container/body-container.componen
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './body-container/login-form/login-form.component';
 import { HighlightDirective } from './directive/highlight.directive';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './body-container/home/home.component';
+
+const appRoutes: Routes = [
+  {
+    path : 'login', component : LoginFormComponent
+  },
+  {
+    path : 'home', component : HomeComponent
+  },
+  {
+    path : '**', redirectTo:'/login'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -17,12 +31,14 @@ import { HighlightDirective } from './directive/highlight.directive';
     BodyContainerComponent,
     FooterComponent,
     LoginFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

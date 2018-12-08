@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginForm } from './login-form';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'cc-login-form',
@@ -32,7 +33,7 @@ export class LoginFormComponent implements OnInit {
     }
   ]
 
-  constructor() {
+  constructor(private router: Router) {
    }
 
   ngOnInit() {
@@ -49,6 +50,8 @@ export class LoginFormComponent implements OnInit {
     console.log(this.loginForm);
     if(this.loginForm.userName === ''){
       alert('user name is required');
+    }else if(this.loginForm.userName === 'user - 1'){
+      this.router.navigate(['home']);
     }
   }
 
